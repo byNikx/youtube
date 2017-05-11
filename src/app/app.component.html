@@ -12,10 +12,14 @@
       <md-toolbar color="primary" class="mat-elevation-z4"></md-toolbar>
       <section style="overflow:auto;" fxFlex>
         <section class="container">
-          <md-grid-list cols="6" rowHeight="116px" gutterSize="5px">
-            <md-grid-tile *ngFor="let color of ['red', 'green', 'limegreen', 'teal', 'magenta', 'cyan']" [ngStyle]="{'background-color':color}">{{color}}</md-grid-tile>
+          <h3>Trending</h3>
+          <md-grid-list cols="4" rowHeight="16:9" gutterSize="5px">
+            <md-grid-tile *ngFor="let video of videos">
+              <img [src]="video.thumb"/>
+            </md-grid-tile>
           </md-grid-list>
         </section>
+        <md-divider></md-divider>
       </section>
     </section>
   </md-sidenav-container>
