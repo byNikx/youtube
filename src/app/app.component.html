@@ -1,0 +1,22 @@
+<section style="height:100%">
+  <md-sidenav-container class="example-container" fxFlex>
+    <md-sidenav #sidenav class="example-sidenav" opened="true" mode="side">
+      <md-toolbar>
+        <button md-icon-button>
+          <md-icon>menu</md-icon>
+        </button>
+        <h3>YouTube</h3>
+      </md-toolbar>
+    </md-sidenav>
+    <section fxLayout="column" fxFlex>
+      <md-toolbar color="primary" class="mat-elevation-z4"></md-toolbar>
+      <section style="overflow:auto;" fxFlex>
+        <section class="container">
+          <md-grid-list cols="6" rowHeight="117px" gutterSize="5px">
+            <md-grid-tile *ngFor="let color of ['red', 'green', 'limegreen', 'teal', 'magenta', 'cyan']" [ngStyle]="{'background-color':color}">{{color}}</md-grid-tile>
+          </md-grid-list>
+        </section>
+      </section>
+    </section>
+  </md-sidenav-container>
+</section>
