@@ -10,12 +10,14 @@ import 'hammerjs';
 import {
   MdButtonModule, MdCheckboxModule,
   MdSidenavModule, MdToolbarModule,
-  MdIconModule, MdGridListModule
+  MdIconModule, MdGridListModule,
+  MdListModule
 } from '@angular/material';
 const MD_COMPONENTS = [
     MdButtonModule, MdCheckboxModule,
     MdSidenavModule, MdToolbarModule,
-    MdIconModule, MdGridListModule
+    MdIconModule, MdGridListModule,
+    MdListModule
 ];
 
 import { AppComponent } from './app.component';
