@@ -12,12 +12,10 @@ html, body{
   font-weight: 400;
   font-size: 10px;
 }
-*{
-  color: rgba(0, 0, 0, 0.87);
-}
 a{
   display: block;
   text-decoration: none;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .title-1{

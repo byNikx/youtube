@@ -11,13 +11,13 @@ import {
   MdButtonModule, MdCheckboxModule,
   MdSidenavModule, MdToolbarModule,
   MdIconModule, MdGridListModule,
-  MdListModule
+  MdListModule, MdMenuModule
 } from '@angular/material';
 const MD_COMPONENTS = [
     MdButtonModule, MdCheckboxModule,
     MdSidenavModule, MdToolbarModule,
     MdIconModule, MdGridListModule,
-    MdListModule
+    MdListModule, MdMenuModule
 ];
 
 import { AppComponent } from './app.component';

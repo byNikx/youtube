@@ -33,7 +33,25 @@ md-grid-list .mat-grid-tile .mat-figure{
       </div>
     </md-sidenav>
     <section fxLayout="column" fxFlex>
-      <md-toolbar color="primary" class="mat-elevation-z4"></md-toolbar>
+      <md-toolbar color="primary" class="mat-elevation-z4">
+        <span fxFlex></span>
+          <div fxLayout="row" fxLayoutGap="10px">
+          <md-menu #moreHeaderOptions="mdMenu">
+            <button md-menu-item>
+              <span>Sign-in</span>
+            </button>
+            <button md-menu-item>
+              <span>Sign-up</span>
+            </button>
+          </md-menu>
+          <button md-icon-button>
+            <md-icon>notifications_none</md-icon>
+          </button>
+          <button md-icon-button [mdMenuTriggerFor]="moreHeaderOptions">
+            <md-icon>more_vert</md-icon>
+          </button>
+        </div>
+      </md-toolbar>
       <section style="overflow:auto;" fxLayout="column">
         <section class="container" *ngFor="let i of [1,2,3,4,5,6,7]">
           <nx-video-category-list></nx-video-category-list>
