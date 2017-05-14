@@ -1,0 +1,4 @@
+<h3 class="title-1">Watch It Again</h3>
+<section fxLayout="row" fxLayoutGap="10px">
+  <nx-video-category-tile *ngFor="let video of videos; let i=index;" [src]="video" [fxHide.lg]="i>3"></nx-video-category-tile>
+</section>

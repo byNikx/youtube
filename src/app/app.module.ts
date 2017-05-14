@@ -21,10 +21,16 @@ const MD_COMPONENTS = [
 ];
 
 import { AppComponent } from './app.component';
+import { TruncateDirective } from './directives/truncate/truncate.directive';
+import { VideoCategoryListComponent } from './components/video/video-category-list/video-category-list.component';
+import { VideoCategoryTileComponent } from './components/video/video-category-tile/video-category-tile.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TruncateDirective,
+    VideoCategoryListComponent,
+    VideoCategoryTileComponent
   ],
   imports: [
     BrowserModule,
