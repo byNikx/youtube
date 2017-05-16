@@ -10,22 +10,22 @@ md-grid-list .mat-grid-tile .mat-figure{
         <button md-icon-button>
           <md-icon>menu</md-icon>
         </button>
-        <h3>VodMine</h3>
+        <h3>YouTube</h3>
       </md-toolbar>
       <div style="overflow:auto;" fxFlex>
         <md-nav-list>
-           <a *ngFor="let link of links" md-list-item href="" >
+           <a *ngFor="let link of links" md-list-item href="#/{{link.label.toLowerCase()}}" >
               <md-icon md-list-icon>{{link.icon}}</md-icon>
               <span md-line>{{link.label}}</span>
            </a>
            <md-divider></md-divider>
-           <h3 md-subheader>BEST OF VODMINE</h3>
-           <a *ngFor="let link of boyt" md-list-item href="" >
+           <h3 md-subheader>BEST OF YOUTUBE</h3>
+           <a *ngFor="let link of boyt" md-list-item href="#/{{link.label.toLowerCase()}}" >
               <md-icon md-list-icon>{{link.icon}}</md-icon>
               <span md-line>{{link.label}}</span>
            </a>
            <md-divider></md-divider>
-           <a *ngFor="let link of extraLinks" md-list-item href="" >
+           <a *ngFor="let link of extraLinks" md-list-item href="#/{{link.label.toLowerCase()}}" >
               <md-icon md-list-icon>{{link.icon}}</md-icon>
               <span md-line>{{link.label}}</span>
            </a>
