@@ -1,0 +1,20 @@
+.video-suggestion{
+	width: 450px;
+}
+
+.video-title{
+	margin: 0;
+    color: var(--yt-primary-text-color);
+    display: block;
+    max-height: 4.8rem;
+    overflow: hidden;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+}
+.video-count{
+	margin: 0;
+	font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2rem;
+}

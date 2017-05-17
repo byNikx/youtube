@@ -1,0 +1,7 @@
+.suggestion-title{
+    max-height: 3.2rem;
+    overflow: hidden;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+}
