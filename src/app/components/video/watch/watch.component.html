@@ -3,19 +3,42 @@
 		<nx-player></nx-player>
 		<section fxLayout="column">
 			<h2 class="video-title">Bruno Mars - It Will Rain [OFFICIAL VIDEO]</h2>
-			<section fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="start center">
+			<section fxLayout="row" fxLayoutAlign="start center">
 				<h3 class="video-count">555,771,544 views</h3>
 				<span fxFlex></span>
-				<button md-icon-button>
-					<md-icon>thumb_up</md-icon>
-				</button>
-				<button md-icon-button>
-					<md-icon>thumb_down</md-icon>
-				</button>
-				<button md-icon-button>
-					<md-icon>more_horiz</md-icon>
-				</button>
+				<section fxLayout="row" fxLayoutGap="8px">
+					<nx-like-bar></nx-like-bar>
+					<button md-icon-button>
+						<md-icon>playlist_add</md-icon>
+					</button>
+					<button md-icon-button [mdMenuTriggerFor]="moreWatchOptions">
+						<md-icon>more_horiz</md-icon>
+					</button>
+				</section>
+				<md-menu #moreWatchOptions="mdMenu">
+				  <button md-menu-item>
+				    <md-icon>share</md-icon>
+				    <span>Share</span>
+				  </button>
+				  <button md-menu-item>
+				    <md-icon>flag</md-icon>
+				    <span>Report</span>
+				  </button>
+				</md-menu>
 			</section>
+			<md-divider></md-divider>
+		</section>
+		<section fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="start start">
+			<div style="width: 52px; height: 52px; border-radius: 32px; background-size: contain; background-image: url(https://yt3.ggpht.com/-Om7wz_eg3MY/AAAAAAAAAAI/AAAAAAAAAAA/sgurR8NHI_g/s88-c-k-no-mo-rj-c0xffffff/photo.jpg);"></div>
+			<section style="font-size: 1.3rem; font-weight: 400px;" fxFlexAlign="center">
+		    	<h3 style="margin:0;"> James Blunt</h3>
+		      <div> Uploaded on Oct 21, 2016 </div>
+		    </section>
+		    <span fxFlex></span>
+		    <button md-raised-button color="accent">
+			  	<md-icon class="material-icons md-18">check</md-icon>
+			  	<span>SUBSCRIBED 4.8M</span>
+  		    </button>
 		</section>
 	</section>
 		
