@@ -1,4 +1,7 @@
-<h3 class="title-1">Watch It Again</h3>
+<section fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="start center">
+	<div style="width: 32px; height:32px; border-radius: 16px; background-size: contain; background-image: url(https://yt3.ggpht.com/-Om7wz_eg3MY/AAAAAAAAAAI/AAAAAAAAAAA/sgurR8NHI_g/s88-c-k-no-mo-rj-c0xffffff/photo.jpg);"></div>
+	<h3 class="title-1">Watch It Again</h3>
+</section>
 <section fxLayout="row" fxLayoutGap="10px">
   <nx-video-category-tile *ngFor="let video of videos; let i=index;" [src]="video" [fxHide.lg]="i>3"></nx-video-category-tile>
 </section>
