@@ -50,23 +50,41 @@
 		</section>
 		<md-divider></md-divider>
 		<md-list class="comment-list">
-			<md-list-item>
-				<section fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="20px">
+			<md-list-item *ngFor="let i of [1,2,3,4,5,6,7]">
+				<section fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="20px" style="margin-bottom: 20px;" fxFlex>
 					<img src="https://yt3.ggpht.com/-Om7wz_eg3MY/AAAAAAAAAAI/AAAAAAAAAAA/sgurR8NHI_g/s88-c-k-no-mo-rj-c0xffffff/photo.jpg" md-list-avatar/>
-					<div fxLayout="column">
-						<span>
-							Id ut cillum veniam ut velit labore ut fugiat elit sunt ea ut nisi magna aliquip cillum laboris.
+					<div fxLayout="column" fxLayoutGap="10px">
+						<span fxLayout="row">
+							<h4 style="margin:0;">James Blunt</h4>
+							<span style="font-style: 1.3rem; margin-left: 10px; color: rgba(0,0,0,.57);">1 year ago</span>
 						</span>
-						<section>
-							<button md-icon-button>
-								<md-icon class="material-icons md-18">thumb_up</md-icon>
-							</button>
-							<button md-icon-button>
-								<md-icon>thumb_down</md-icon>
-							</button>
-						</section>					
+						<div>
+							<span>
+							Id ut cillum veniam ut velit labore ut fugiat elit sunt ea ut nisi magna aliquip cillum laboris.
+							</span>
+							<section fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+								<a href="#">REPLY</a>
+								<span>202</span>
+								<div fxLayout="row">
+									<button md-icon-button>
+										<md-icon class="material-icons md-18">thumb_up</md-icon>
+									</button>
+									<button md-icon-button>
+										<md-icon class="material-icons md-18">thumb_down</md-icon>
+									</button>
+								</div>
+							</section>
+						</div>
 					</div>
 				</section>
+				<md-menu #moreCommentOptions="mdMenu">
+					<button md-menu-item>
+						Report spam or abuse
+					</button>
+				</md-menu>
+				<button md-icon-button fxFlexAlign="start" [mdMenuTriggerFor]="moreCommentOptions">
+					<md-icon>more_vert</md-icon>
+				</button>
 			</md-list-item>
 		</md-list>
 	</section>
