@@ -42,6 +42,7 @@ import { PaperComponent } from './components/paper/paper.component';
 import { VideoSuggestionListComponent } from './components/video/video-suggestion-list/video-suggestion-list.component';
 import { VideoSuggestionTileComponent } from './components/video/video-suggestion-tile/video-suggestion-tile.component';
 import { LikeBarComponent } from './components/video/like-bar/like-bar.component';
+import { UploadComponent } from './components/upload/upload.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { LikeBarComponent } from './components/video/like-bar/like-bar.component
     VideoSuggestionListComponent,
     VideoSuggestionTileComponent,
     LikeBarComponent,
-    HomeComponent
+    HomeComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
