@@ -21,14 +21,14 @@ import {
   MdSidenavModule, MdToolbarModule,
   MdIconModule, MdGridListModule,
   MdListModule, MdMenuModule,
-  MdProgressBarModule
+  MdProgressBarModule, MdTabsModule
 } from '@angular/material';
 const MD_COMPONENTS = [
     MdButtonModule, MdCheckboxModule,
     MdSidenavModule, MdToolbarModule,
     MdIconModule, MdGridListModule,
     MdListModule, MdMenuModule,
-    MdProgressBarModule
+    MdProgressBarModule, MdTabsModule
 ];
 
 import { AppComponent } from './app.component';
