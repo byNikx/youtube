@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FileSelectDirective, FileDropDirective, FileUploader } from 'ng2-file-upload/ng2-file-upload';
 
 @Component({
   selector: 'nx-upload',
