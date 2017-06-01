@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -21,14 +22,16 @@ import {
   MdSidenavModule, MdToolbarModule,
   MdIconModule, MdGridListModule,
   MdListModule, MdMenuModule,
-  MdProgressBarModule, MdTabsModule
+  MdProgressBarModule, MdTabsModule,
+  MdProgressSpinnerModule
 } from '@angular/material';
 const MD_COMPONENTS = [
     MdButtonModule, MdCheckboxModule,
     MdSidenavModule, MdToolbarModule,
     MdIconModule, MdGridListModule,
     MdListModule, MdMenuModule,
-    MdProgressBarModule, MdTabsModule
+    MdProgressBarModule, MdTabsModule,
+    MdProgressSpinnerModule
 ];
 
 import { AppComponent } from './app.component';
@@ -43,6 +46,7 @@ import { VideoSuggestionListComponent } from './components/video/video-suggestio
 import { VideoSuggestionTileComponent } from './components/video/video-suggestion-tile/video-suggestion-tile.component';
 import { LikeBarComponent } from './components/video/like-bar/like-bar.component';
 import { UploadComponent } from './components/upload/upload.component';
+import { InputFileComponent } from './components/input-file/input-file.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +61,10 @@ import { UploadComponent } from './components/upload/upload.component';
     VideoSuggestionTileComponent,
     LikeBarComponent,
     HomeComponent,
-    UploadComponent
+    UploadComponent,
+    FileSelectDirective,
+    FileDropDirective,
+    InputFileComponent,
   ],
   imports: [
     BrowserModule,
