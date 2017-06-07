@@ -23,8 +23,9 @@
                         </button>
 					</div>
 				</md-list-item> -->
-				<md-list-item *ngFor="let item of uploader.queue">
-					<md-progress-spinner md-list-icon mode="indeterminate" strokeWidth="20px" *ngIf="item.isUploading"></md-progress-spinner>
+				<md-list-item *ngFor="let item of uploader.queue">{{item.isUploading}}
+					<!-- <md-spinner strokeWidth="20px"></md-spinner> -->
+ 					<md-progress-spinner md-list-icon mode="determinate" [value]="item.progress"></md-progress-spinner>
 					<md-icon md-list-icon *ngIf="item.isUploaded">{{item.isSuccess?'check':'error_outline' }}</md-icon>
 					<md-icon md-list-icon *ngIf="!!!item.progress && !item.isUploading">insert_drive_file</md-icon>
 				    <h4 md-line>50x-image-616d02819eb978d9f07cd61de396b816.gif</h4>

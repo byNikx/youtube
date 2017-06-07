@@ -17,7 +17,7 @@ export class UploadComponent implements DoCheck {
  
 
   ngDoCheck(){
-  	console.log(this.uploader.queue);
+  	//console.log(this.uploader.queue);
   }	
 
   public fileOverBase(e:any):void {
