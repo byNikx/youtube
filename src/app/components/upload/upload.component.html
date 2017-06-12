@@ -1,45 +1,63 @@
 <section class="container" fxLayout="row" fxLayoutGap="20px" style="margin-top:2rem;">
-	<nx-paper fxFlex>
-		<md-tab-group dynamicHeight="true">
-		  <md-tab label="Computer">
-		  	<md-list >
-		  		<h3 md-subheader>Files ({{uploader.queue.length}})</h3>
-		  		<md-progress-bar strokeWidth="20" mode="determinate" [value]="uploader.progress"></md-progress-bar>
-<!-- 				<md-list-item *ngFor="let item of uploader.queue">
-					<div md-line>
-						<span>
-							{{ item?.file?.name }}
-						</span>
-						<span fxFlex></span>
-						<button [fxHide]="item.isUploading || item.isSuccess" md-icon-button (click)="item.upload()" [disabled]="item.isReady || item.isUploading || item.isSuccess">
-                            <md-icon>file_upload</md-icon>
-                        </button>
-                        <md-icon fxHide [fxShow]="item.isSuccess">check_circle</md-icon>
-                        <button md-icon-button [fxHide]="item.isSuccess" (click)="item.cancel()" [disabled]="!item.isUploading">
-                            <md-icon>close</md-icon>
-                        </button>
-                        <button [fxHide]="item.isUploading || item.isSuccess" md-icon-button (click)="item.remove()">
-                            <md-icon>delete</md-icon>
-                        </button>
-					</div>
-				</md-list-item> -->
-				<md-list-item *ngFor="let item of uploader.queue">{{item.isUploading}}
-					<!-- <md-spinner strokeWidth="20px"></md-spinner> -->
- 					<md-progress-spinner md-list-icon mode="determinate" [value]="item.progress"></md-progress-spinner>
-					<md-icon md-list-icon *ngIf="item.isUploaded">{{item.isSuccess?'check':'error_outline' }}</md-icon>
-					<md-icon md-list-icon *ngIf="!!!item.progress && !item.isUploading">insert_drive_file</md-icon>
-				    <h4 md-line>50x-image-616d02819eb978d9f07cd61de396b816.gif</h4>
-				    <button md-button (click)="item.isUploading?item.cancel():item.upload()">{{item.isUploading?'STOP':'UPLOAD'}}</button>
-				</md-list-item>
-				<md-divider></md-divider>
-				
-			</md-list>
-			<input type="file" ng2FileSelect [uploader]="uploader" multiple/>
-		  </md-tab>
-		  <md-tab label="Remote">Remote upload</md-tab>
-		  <md-tab label="FTP">FTP Upload</md-tab>
-		</md-tab-group>
-	</nx-paper>
+	<section fxFlex>
+		<nx-paper>
+			<nav md-tab-nav-bar>
+			  <a md-tab-link active="true">Computer</a>
+			  <a md-tab-link>Remote</a>
+			  <a md-tab-link>FTP</a>
+			</nav>
+		</nx-paper>
+		<section fxLayout="column" fxLayoutGap="20px" style="margin-top: 20px;">
+			<md-card>
+				<md-card-header>
+				    <md-card-title>Sam Smith - I'm Not The Only One</md-card-title>
+				    <md-card-subtitle>Dog Breed</md-card-subtitle>
+				    <span fxFlex></span>
+				    <button md-icon-button>
+				    	<md-icon>close</md-icon>
+				    </button>
+ 			    </md-card-header>
+ 			    <img md-card-image src="http://via.placeholder.com/950x400?text=blah blah blah...">
+ 			    <md-card-content>
+				    <section fxLayout="row" fxLayoutGap="20px">
+				    	<section fxFlex fxLayout="column" fxLayoutGap="20px">
+				    		<md-input-container class="full-width">
+						      <input mdInput placeholder="Title">
+						    </md-input-container>
+						    <md-input-container class="full-width">
+						      <textarea mdInput placeholder="Description" rows="4" maxlength="29"></textarea>
+						    </md-input-container>
+						    <md-radio-group fxLayout="row" fxLayoutGap="20px">
+							  <md-radio-button value="1">Public</md-radio-button>
+							  <md-radio-button value="2">Private</md-radio-button>
+							</md-radio-group>
+				    	</section>
+				    	<section fxFlex>
+				    		<md-grid-list cols="3" rowHeight="16:9" gutterSize="5px">
+							  <md-grid-tile>
+							  	<img style="width: 100%;" src="https://i.ytimg.com/vi/j5-yKhDd64s/hqdefault.jpg?custom=true&w=246&h=138&stc=true&jpg444=true&jpgq=90&sp=67&sigh=WiQRAoZbxFPkjVnZONJ-AdinSkA" alt="">
+							  </md-grid-tile>
+							  <md-grid-tile>
+							  	<img style="width: 100%;" src="https://i.ytimg.com/vi/zUzd9KyIDrM/hqdefault.jpg?custom=true&w=246&h=138&stc=true&jpg444=true&jpgq=90&sp=67&sigh=ceCVfxMlu0IvZXXPpb8ZLwL510E" alt="">
+							  </md-grid-tile>
+							  <md-grid-tile>
+							  	<img style="width: 100%;" src="https://i.ytimg.com/vi/3zPvfVmL0nE/hqdefault.jpg?custom=true&w=246&h=138&stc=true&jpg444=true&jpgq=90&sp=67&sigh=iaxx9gIG7A1QHhqo7PoC9sjf6j8" alt="">
+							  </md-grid-tile>
+							  <md-grid-tile>
+							  	<img style="width: 100%;" src="https://i.ytimg.com/vi/JGwWNGJdvx8/hqdefault.jpg?custom=true&w=246&h=138&stc=true&jpg444=true&jpgq=90&sp=67&sigh=a5reHxrqsrsRm0ZxAQFv_JzXmIk" alt="">
+							  </md-grid-tile>
+							</md-grid-list>
+				    	</section>
+				    </section>
+			    </md-card-content>
+				<md-card-actions>
+				    <button md-button>SAVE</button>
+				    <button md-button>BLAH...</button>
+				</md-card-actions>
+			</md-card>
+		</section>
+	</section>
+
 	<nx-paper fxFlex="300px">dd
 	</nx-paper>
 </section>

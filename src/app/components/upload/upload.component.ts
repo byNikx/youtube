@@ -1,7 +1,7 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
 import { FileUploader } from 'ng2-file-upload';
 
-const URL = 'https://evening-anchorage-3159.herokuapp.com/api/';
+const URL = 'https://evening-anchorage-3159.herokuapp.com/api/1';
 
 @Component({
   selector: 'nx-upload',
@@ -17,7 +17,7 @@ export class UploadComponent implements DoCheck {
  
 
   ngDoCheck(){
-  	//console.log(this.uploader.queue);
+  	///console.log(this.uploader.queue);
   }	
 
   public fileOverBase(e:any):void {

@@ -1,0 +1,6 @@
+.mat-tab-header, .mat-tab-nav-bar{
+	border-bottom: 0 !important;
+}
+.full-width {
+  width: 100%;
+}

@@ -23,7 +23,9 @@ import {
   MdIconModule, MdGridListModule,
   MdListModule, MdMenuModule,
   MdProgressBarModule, MdTabsModule,
-  MdProgressSpinnerModule
+  MdProgressSpinnerModule, MdCardModule,
+  MdInputModule, MdRadioModule,
+  MdChipsModule
 } from '@angular/material';
 const MD_COMPONENTS = [
     MdButtonModule, MdCheckboxModule,
@@ -31,7 +33,9 @@ const MD_COMPONENTS = [
     MdIconModule, MdGridListModule,
     MdListModule, MdMenuModule,
     MdProgressBarModule, MdTabsModule,
-    MdProgressSpinnerModule
+    MdProgressSpinnerModule, MdCardModule,
+    MdInputModule, MdRadioModule,
+    MdChipsModule
 ];
 
 import { AppComponent } from './app.component';

@@ -10,7 +10,7 @@ md-grid-list .mat-grid-tile .mat-figure{
         <button md-icon-button>
           <md-icon>menu</md-icon>
         </button>
-        <h3>YouTube</h3>
+        <h3>BlahBlah</h3>
       </md-toolbar>
       <div style="overflow:auto;" fxFlex>
         <md-nav-list>
@@ -19,7 +19,7 @@ md-grid-list .mat-grid-tile .mat-figure{
               <span md-line>{{link.label}}</span>
            </a>
            <md-divider></md-divider>
-           <h3 md-subheader>BEST OF YOUTUBE</h3>
+           <h3 md-subheader>BEST OF BLAHBLAH</h3>
            <a *ngFor="let link of boyt" md-list-item href="#/{{link.label.toLowerCase()}}" >
               <md-icon md-list-icon>{{link.icon}}</md-icon>
               <span md-line>{{link.label}}</span>
@@ -33,25 +33,28 @@ md-grid-list .mat-grid-tile .mat-figure{
       </div>
     </md-sidenav>
     <section fxLayout="column" fxFlex>
-      <md-toolbar color="primary" class="mat-elevation-z4">
+      <md-toolbar color="primary" class="mat-elevation-z4" style="z-index: 1;">
         <span fxFlex></span>
           <div fxLayout="row" fxLayoutGap="10px">
           <md-menu #moreHeaderOptions="mdMenu">
             <button md-menu-item>
-              <span>Sign-in</span>
+              <span>SIGN IN</span>
             </button>
             <button md-menu-item>
-              <span>Sign-up</span>
+              <span>SIGN UP</span>
             </button>
           </md-menu>
           <a [routerLink]="['/upload']" md-icon-button>
             <md-icon>file_upload</md-icon>
           </a>
-          <button md-icon-button>
+<!--           <button md-icon-button>
             <md-icon>notifications_none</md-icon>
-          </button>
+          </button> -->
           <button md-icon-button [mdMenuTriggerFor]="moreHeaderOptions">
             <md-icon>more_vert</md-icon>
+          </button>
+          <button md-button>
+              <span>SIGN IN</span>
           </button>
         </div>
       </md-toolbar>
