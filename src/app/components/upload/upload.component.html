@@ -7,22 +7,23 @@
 			  <a md-tab-link>FTP</a>
 			</nav>
 		</nx-paper>
+		<input type="file" ng2FileSelect [uploader]="uploader" multiple  />
 		<section fxLayout="column" fxLayoutGap="20px" style="margin-top: 20px;">
-			<md-card>
+			<md-card *ngFor="let item of uploader?.queue">
 				<md-card-header>
-				    <md-card-title>Sam Smith - I'm Not The Only One</md-card-title>
+				    <md-card-title>{{item.file.name}}</md-card-title>
 				    <md-card-subtitle>Dog Breed</md-card-subtitle>
 				    <span fxFlex></span>
 				    <button md-icon-button>
 				    	<md-icon>close</md-icon>
 				    </button>
  			    </md-card-header>
- 			    <img md-card-image src="http://via.placeholder.com/950x400?text=blah blah blah...">
+ 			    <img md-card-image src="http://via.placeholder.com/950x400?text=blah blah blah..." fxHide>
  			    <md-card-content>
 				    <section fxLayout="row" fxLayoutGap="20px">
 				    	<section fxFlex fxLayout="column" fxLayoutGap="20px">
 				    		<md-input-container class="full-width">
-						      <input mdInput placeholder="Title">
+						      <input mdInput placeholder="Title" [value]="item?.file?.name">
 						    </md-input-container>
 						    <md-input-container class="full-width">
 						      <textarea mdInput placeholder="Description" rows="4" maxlength="29"></textarea>
@@ -32,8 +33,12 @@
 							  <md-radio-button value="2">Private</md-radio-button>
 							</md-radio-group>
 				    	</section>
-				    	<section fxFlex>
-				    		<md-grid-list cols="3" rowHeight="16:9" gutterSize="5px">
+				    	<section fxFlex fxLayoutGap="10px">
+				    		<section fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
+								<md-progress-spinner mode="determinate" [value]="item.progress" strokeWidth="10"></md-progress-spinner>
+					    		<div>uploading...{{item.progress}}%</div>				    			
+				    		</section>
+				    		<md-grid-list cols="3" rowHeight="16:9" gutterSize="5px" fxHide>
 							  <md-grid-tile>
 							  	<img style="width: 100%;" src="https://i.ytimg.com/vi/j5-yKhDd64s/hqdefault.jpg?custom=true&w=246&h=138&stc=true&jpg444=true&jpgq=90&sp=67&sigh=WiQRAoZbxFPkjVnZONJ-AdinSkA" alt="">
 							  </md-grid-tile>
@@ -45,6 +50,12 @@
 							  </md-grid-tile>
 							  <md-grid-tile>
 							  	<img style="width: 100%;" src="https://i.ytimg.com/vi/JGwWNGJdvx8/hqdefault.jpg?custom=true&w=246&h=138&stc=true&jpg444=true&jpgq=90&sp=67&sigh=a5reHxrqsrsRm0ZxAQFv_JzXmIk" alt="">
+							  </md-grid-tile>
+							  <md-grid-tile>
+							  	<img style="width: 100%;" src="https://i.ytimg.com/vi/1w7OgIMMRc4/hqdefault.jpg?custom=true&w=246&h=138&stc=true&jpg444=true&jpgq=90&sp=67&sigh=u0_Wq5k19Ezvbb3DSVcONY9bC24" alt="">
+							  </md-grid-tile>
+							  <md-grid-tile>
+							  	<img style="width: 100%;" src="https://i.ytimg.com/vi/opU1urLhw50/hqdefault.jpg?custom=true&w=246&h=138&stc=true&jpg444=true&jpgq=90&sp=67&sigh=OL6dJkq_6XCqiRwPJdpc2Ql2Am8" alt="">
 							  </md-grid-tile>
 							</md-grid-list>
 				    	</section>

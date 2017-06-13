@@ -1,7 +1,7 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
 import { FileUploader } from 'ng2-file-upload';
 
-const URL = 'https://evening-anchorage-3159.herokuapp.com/api/1';
+const URL = 'https://evening-anchorage-3159.herokuapp.com/api/';
 
 @Component({
   selector: 'nx-upload',
@@ -11,13 +11,13 @@ const URL = 'https://evening-anchorage-3159.herokuapp.com/api/1';
 export class UploadComponent implements DoCheck {
 
 
-  public uploader:FileUploader = new FileUploader({url: URL});
+  public uploader:FileUploader = new FileUploader({url: URL, autoUpload: true});
   public hasBaseDropZoneOver:boolean = false;
   public hasAnotherDropZoneOver:boolean = false;
  
 
   ngDoCheck(){
-  	///console.log(this.uploader.queue);
+  	console.log(this.uploader.queue);
   }	
 
   public fileOverBase(e:any):void {
