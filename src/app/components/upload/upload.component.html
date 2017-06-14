@@ -9,18 +9,18 @@
 		</nx-paper>
 		<input type="file" ng2FileSelect [uploader]="uploader" multiple  />
 		<section fxLayout="column" fxLayoutGap="20px" style="margin-top: 20px;">
-			<md-card *ngFor="let item of uploader?.queue">
+			<md-card *ngFor="let item of uploader?.queue" class="upload-panel" file="item">
 				<md-card-header>
 				    <md-card-title>{{item.file.name}}</md-card-title>
 				    <md-card-subtitle>Dog Breed</md-card-subtitle>
 				    <span fxFlex></span>
-				    <button md-icon-button>
+				    <button md-icon-button (click)="item.remove()">
 				    	<md-icon>close</md-icon>
 				    </button>
  			    </md-card-header>
  			    <img md-card-image src="http://via.placeholder.com/950x400?text=blah blah blah..." fxHide>
  			    <md-card-content>
-				    <section fxLayout="row" fxLayoutGap="20px">
+				    <section fxLayout="row" fxLayoutGap="25px">
 				    	<section fxFlex fxLayout="column" fxLayoutGap="20px">
 				    		<md-input-container class="full-width">
 						      <input mdInput placeholder="Title" [value]="item?.file?.name">
@@ -33,12 +33,22 @@
 							  <md-radio-button value="2">Private</md-radio-button>
 							</md-radio-group>
 				    	</section>
-				    	<section fxFlex fxLayoutGap="10px">
-				    		<section fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px">
-								<md-progress-spinner mode="determinate" [value]="item.progress" strokeWidth="10"></md-progress-spinner>
-					    		<div>uploading...{{item.progress}}%</div>				    			
-				    		</section>
-				    		<md-grid-list cols="3" rowHeight="16:9" gutterSize="5px" fxHide>
+				    	<section fxFlex fxLayout="column" fxLayoutGap="10px">
+							<section fxLayout="column" fxLayoutGap="5px">
+		    					<md-progress-bar mode="determinate" [value]="item.progress"></md-progress-bar>
+		    					<span style="font-size: 1.2rem;" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
+		    						<span>Uploading...{{item.progress}}% {{fileProgress?.label}}</span>
+		    						<md-icon class="material-icons md-18">check_circle</md-icon>
+		    					</span>
+		    				</section>
+		    				<section fxLayout="column" fxLayoutGap="5px">
+		    					<md-progress-bar mode="determinate" value="25"></md-progress-bar>
+		    					<span style="font-size: 1.2rem;" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
+		    						<span>Processing...5%</span>
+<!-- 		    						<md-icon class="material-icons md-18">check_circle</md-icon> -->
+		    					</span>
+		    				</section>
+				    		<md-grid-list cols="3" rowHeight="16:9" gutterSize="5px" fxHide1>
 							  <md-grid-tile>
 							  	<img style="width: 100%;" src="https://i.ytimg.com/vi/j5-yKhDd64s/hqdefault.jpg?custom=true&w=246&h=138&stc=true&jpg444=true&jpgq=90&sp=67&sigh=WiQRAoZbxFPkjVnZONJ-AdinSkA" alt="">
 							  </md-grid-tile>
@@ -62,8 +72,7 @@
 				    </section>
 			    </md-card-content>
 				<md-card-actions>
-				    <button md-button>SAVE</button>
-				    <button md-button>BLAH...</button>
+				    <button md-button>PUBLISH</button>
 				</md-card-actions>
 			</md-card>
 		</section>
